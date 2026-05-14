@@ -1,68 +1,150 @@
 <!DOCTYPE html>
-<html lang="" pt-pt>
-
+<html lang="pt-PT">
 <head>
-
-  <title> Catarina Neri </title>
-  <meta charset="UTG-8">
-  <link rel="stylesheet" href=estilos.css>
-
-
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catarina Neri</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
-
 <body>
 
+  <header id="cabecalho">
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#trabalhos">Trabalhos</a></li>
+        <li><a href="#contacto">Contactos</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div id="cabecalho">
-    <ul>
-      <li><a href="index.html" class="active">Início</a></li>
-      <li> <a style="flex: 1; justify-content: center;" href="trabalhos.html"> Trabalhos </a> </li>
-      <li> <a href="CV.html"> Contatos</a> </li>
+  <section id="inicio">
+    <h1 class="portfolio-title">Catarina Neri</h1>
 
+    <div class="nome">
+      <p>Catarina Neri</p>
+      <p>Design de Comunicação</p>
+      <p>ESAP</p>
+    </div>
+  </section>
 
-    </ul>
+  <section id="sobre">
+    <h2 class="portfolio-title">Sobre Mim</h2>
+
+    <div class="myDiv">
+      <h2>Quem sou eu?</h2>
+      <p>
+        Sou uma jovem de 20 anos, residente na cidade do Porto desde 2018.
+        Tenho um grande interesse por arte e aprecio a oportunidade de me comunicar
+        com diferentes pessoas. Assim, valorizo as interações sociais e a troca de ideias.
+      </p>
+    </div>
+  </section>
+
+  <section id="trabalhos">
+    <h2 class="portfolio-title">Trabalhos</h2>
+
+    <div class="galeria">
+      <div class="projeto">
+        <img src="assets/moqueca.jpg" alt="NC" onclick="openModal(this)">
+        <div class="info">
+          <h3>NC</h3>
+          <p>Branding</p>
+        </div>
+      </div>
+
+      <div class="projeto">
+        <img src="assets/cartazradiumai.jpg" alt="Concerto Bandas" onclick="openModal(this)">
+        <div class="info">
+          <h3>Concerto Bandas</h3>
+          <p>Cartaz</p>
+        </div>
+      </div>
+
+      <div class="projeto">
+        <img src="assets/desfile.catrinasport.png" alt="Las Catrinas" onclick="openModal(this)">
+        <div class="info">
+          <h3>Las Catrinas</h3>
+          <p>Cartaz</p>
+        </div>
+      </div>
+
+      <div class="projeto">
+        <img src="assets/livro.jpg" alt="Capa de Livro" onclick="openModal(this)">
+        <div class="info">
+          <h3>Capa de Livro</h3>
+          <p>Editorial</p>
+        </div>
+      </div>
+
+      <div class="projeto">
+        <img src="assets/lavt.jpg" alt="Brand" onclick="openModal(this)">
+        <div class="info">
+          <h3>Brand</h3>
+          <p>Identidade Visual</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2 class="portfolio-title">Contactos</h2>
+
+    <div class="cv-container">
+      <div class="cv-card">
+        <div class="cv-header">
+          <h2>Catarina Neri</h2>
+          <p>Design de Comunicação</p>
+        </div>
+
+        <div class="cv-info">
+          <div class="info-item">
+            <strong>Email:</strong> <a href="mailto:nericatarina@gmail.com">nericatarina@gmail.com</a>
+          </div>
+          <div class="info-item">
+            <strong>Local:</strong> Porto, Portugal
+          </div>
+          <div class="info-item">
+            <strong>Telefone:</strong> +351 912 319 016
+          </div>
+        </div>
+
+        <div class="cv-buttons">
+          <a href="assets/catarinacv.pdf" class="btn-download" download>Download CV</a>
+          <a href="mailto:nericatarina@gmail.com" class="btn-contact">Enviar Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="myModal" class="modal" onclick="closeModal(event)">
+    <span class="close" onclick="closeModal(event)">&times;</span>
+    <img class="modal-content" id="img01" alt="">
+    <div id="caption" class="caption-container"></div>
   </div>
-
-
-
-  <h1 class="portfolio-title">Sobre Mim</h1>
-
-
-  <div class="nome">
-    <p>Catarina Neri</p>
-    <p>Design de Comunicação</p>
-    <p> ESAP</p>
-
-  </div>
-
-  </div>
-
-  <style>
-    .myDiv {
-      background-color: rgb(118, 132, 136);
-      width: 30%;
-    }
-  </style>
-
-
-  <div class="myDiv">
-    <h2>Quem sou eu?</h2>
-    <p>Sou uma jovem de 20 anos, residente na cidade do Porto desde 2018. </h>
-      <h>Tenho um grande interesse por arte e aprecio a oportunidade de me comunicar com diferentes pessoas. </h>
-      <h>Assim valorizando as interações sociais e a troca de ideias.</h>
-    <p style="font-size: 18px;"></p>
-
-  </div>
-
-
-
 
   <footer>
-    <p>Porto, Portugal | nericatarina@gmail.com | © 2026 Catarina Neri</p>
+    <p>Porto, Portugal | <a href="mailto:nericatarina@gmail.com">nericatarina@gmail.com</a> | © 2026 Catarina Neri</p>
   </footer>
 
-</body>
+  <script>
+    function openModal(img) {
+      document.getElementById("myModal").style.display = "block";
+      document.getElementById("img01").src = img.src;
+      document.getElementById("img01").alt = img.alt;
+      document.getElementById("caption").innerText = img.alt;
+    }
 
+    function closeModal(event) {
+      if (
+        event.target.id === "myModal" ||
+        event.target.classList.contains("close")
+      ) {
+        document.getElementById("myModal").style.display = "none";
+      }
+    }
+  </script>
+
+</body>
 </html>
