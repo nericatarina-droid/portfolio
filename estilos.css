@@ -40,52 +40,60 @@ body {
 }
 
 section {
-  min-height: 100vh;
   padding: 120px 20px 80px;
 }
 
-h1, h2 {
+h1{
   color: rgb(35, 10, 10);
   text-align: center;
   font-family: Georgia, serif;
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 2;
 }
 
-.nome,
-.myDiv {
-  width: 90%;
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 25px;
-  border-radius: 20px;
-  color: white;
-  text-align: center;
+.hero{
+    min-height: 50vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 0 120px;
+}
+
+.hero-text{
+    max-width: 800px;
 }
 
 .nome {
-  background: linear-gradient(145deg, #ff9a9e 0%, #fecfef 100%);
-  color: #d63384;
+  color: white;
+  background: none;
+  font-size:80px;
 }
 
 .myDiv {
-  background: linear-gradient(145deg, #e36a48 0%, #aa2525 100%);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  color: rgb(222, 200, 200);
+  background: none;
+  box-shadow: none;
+  text-align: center;
 }
 
 .portfolio-title {
   text-align: center;
-  font-size: 48px;
+  font-size: 50px;
   color: rgb(44, 1, 1);
-  margin: 0 0 50px;
+  margin: 120px 0 50px; 
   font-family: Georgia, serif;
   position: relative;
+
 }
 
-.portfolio-title::before,
+
 .portfolio-title::after {
   content: "";
   position: absolute;
@@ -96,11 +104,8 @@ p {
   background-color: black;
 }
 
-.portfolio-title::before {
-  top: -15px;
-}
 
-.portfolio-title::after {
+.portfolio-title: {
   bottom: -15px;
 }
 
@@ -174,7 +179,7 @@ p {
 }
 
 .info-item a {
-  color: #8b1e3f;
+  color: #b97e90;
   text-decoration: none;
 }
 
@@ -259,9 +264,6 @@ footer a {
     flex-wrap: wrap;
   }
 
-  .portfolio-title {
-    font-size: 34px;
-  }
 
   .projeto {
     width: 90%;
@@ -394,3 +396,22 @@ body {
 
   color: rgba(255,255,255,0.85);
 }
+
+.titulo-principal {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+}
+
+#sobre {
+      padding: 120px 230px 80px;
+      
+  }
+
+h2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#trabalhos .portfolio-title {
+      margin-top: 40px;
+  }
